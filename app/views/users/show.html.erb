@@ -1,7 +1,6 @@
-<%= @category.name %>
-
-<%= @category.posts.each do |post|%>
-  <%= link_to post.title, post_path(post) %>
-  <%= post.content %>
-
-<% end %>
+<h1><% @user.username %> has commented on these posts: </h1>
+<ul>
+  <%= @user.posts.each do |post| %>
+    <li><%= link_to(post.title, post) %></li>
+  <% end %>
+</ul> 
